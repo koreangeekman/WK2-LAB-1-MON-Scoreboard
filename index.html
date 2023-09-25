@@ -10,45 +10,53 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
+  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+    defer></script>
 </head>
 
-<body>
-  <main class="container-fluid imgBG h-100">
+<body class="debug">
+  <main class="container-fluid imgBG">
     <!-- SECTION HEADER -->
-    <div class="row">
-      <div class="col-12 d-flex justify-content-end align-items-start p-5">
-        <button class="btn btn-danger fs-2">RESET</button>
+    <div class="row justify-content-center align-items-center p-2">
+      <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn-danger fs-3" onclick="resetBoard()">RESET</button>
       </div>
-    </div>
-    <!-- !SECTION HEADER -->
+      <!-- !SECTION HEADER -->
 
-    <!-- SECTION SCOREBOARD -->
-    <div class="row p-5">
-      <div class="col-12 card bgTransBlue">
-        <div class="row d-flex justify-content-center align-items-center text-light board bgTransBlue p-5">
-          <div class="col-6 fs-1 fw-bold">HOME</div>
-          <div class="col-6 fs-1 fw-bold">AWAY</div>
-          <div class="col-6 card bgTransBlue fs-1 fw-bold" id="homeScore">0</div>
-          <div class="col-6 card bgTransBlue fs-1 fw-bold" id="awayScore">0</div>
+      <!-- SECTION SCOREBOARD -->
+      <div class="col-12 col-md-6 align-items-center text-light p-2">
+        <div class="card p-5">
+          <div class="d-flex justify-content-around text-center m-3">
+            <span class="home">
+              <p class="teams m-3">HOME</p>
+              <p class="score card" id="homeScore">0</p>
+            </span>
+            <span class="away">
+              <p class="teams m-3">AWAY</p>
+              <p class="score card" id="awayScore">0</p>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- !SECTION SCOREBOARD -->
+      <!-- !SECTION SCOREBOARD -->
 
-    <!-- SECTION SCORE CONTROLS -->
-    <div class="row p-5">
-      <div class="col-12 d-flex justify-content-evenly align-items-evenly">
-        <button class="btn btn-primary fs-1 m-5">
-          <p class="mb-0">HOME +1</p>
-        </button>
-        <button class="btn btn-primary fs-1 m-5">
-          <p class="mb-0">AWAY +1</p>
-        </button>
-      </div>
-      <div class="col-12 d-flex justify-content-evenly align-items-evenly">
-        <button class="btn btn-primary fs-1 m-5">HOME +3</button>
-        <button class="btn btn-primary fs-1 m-5">AWAY +3</button>
+      <!-- SECTION SCORE CONTROLS -->
+      <div class="col-12 col-md-6 m-1">
+        <span class="d-flex justify-content-evenly align-items-evenly">
+          <button class="btn btn-primary fs-2 m-3" onclick="addScore('home',1)">HOME +1</button>
+          <button class="btn btn-primary fs-2 m-3" onclick="addScore('away',1)">AWAY +1</button>
+        </span>
+        <span class="d-flex justify-content-evenly align-items-evenly">
+          <button class="btn btn-primary fs-2 m-3" onclick="addScore('home',3)">HOME +3</button>
+          <button class="btn btn-primary fs-2 m-3" onclick="addScore('away',3)">AWAY +3</button>
+        </span>
       </div>
     </div>
     <!-- !SECTION SCORE CONTROLS -->
