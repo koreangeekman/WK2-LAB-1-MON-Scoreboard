@@ -31,13 +31,13 @@ function checkWin() {
   if (away >= 21) {
     declareWin('Away');
   }
-  console.log('score check')
-  console.log('home', home);
-  console.log('away', away);
+  // console.log('score check')
+  // console.log('home', home);
+  // console.log('away', away);
 }
 
 function declareWin(team) {
-  console.log(`${team} team wins!`);
+  // console.log(`${team} team wins!`);
   window.alert(`${team} team wins!`);
   resetBoard();
 }
