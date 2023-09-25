@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <main class="container-fluid imgBG">
+  <main class="container-fluid imgBG h-100">
     <!-- SECTION HEADER -->
     <div class="row">
       <div class="col-12 d-flex justify-content-end align-items-start p-5">
@@ -24,9 +24,14 @@
     <!-- !SECTION HEADER -->
 
     <!-- SECTION SCOREBOARD -->
-    <div class="row">
-      <div class="col-12">
-
+    <div class="row p-5">
+      <div class="col-12 card bgTransBlue">
+        <div class="row d-flex justify-content-center align-items-center text-light board bgTransBlue p-5">
+          <div class="col-6 fs-1 fw-bold">HOME</div>
+          <div class="col-6 fs-1 fw-bold">AWAY</div>
+          <div class="col-6 card bgTransBlue fs-1 fw-bold" id="homeScore">0</div>
+          <div class="col-6 card bgTransBlue fs-1 fw-bold" id="awayScore">0</div>
+        </div>
       </div>
     </div>
     <!-- !SECTION SCOREBOARD -->
