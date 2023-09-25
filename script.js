@@ -10,7 +10,7 @@ function addScore(team, points) {
   if (team == 'away') {
     away += points;
   }
-  console.log('addScore', team, points)
+  // console.log('addScore', team, points)
   draw();
 }
 
@@ -18,11 +18,11 @@ function resetBoard() {
   home = 0;
   away = 0;
   draw();
-  console.log('attempted scores reset')
+  // console.log('attempted scores reset')
 }
 
 function draw() {
   document.getElementById('homeScore').innerText = home;
   document.getElementById('awayScore').innerText = away;
-  console.log('attempted scores draw')
+  // console.log('attempted scores draw')
 }
